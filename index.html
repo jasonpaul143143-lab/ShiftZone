@@ -1,19 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ShiftZone — Car Games</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header><div class="nav wrap"><a class="brand" href="#"><b>SHIFT</b>ZONE</a><nav><button data-scroll="games">Games</button><button data-scroll="garage">Garage</button><button data-scroll="about">About</button></nav><button id="random" aria-label="Random game">↻</button></div></header>
-<main>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ShiftZone — Car Games</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
+<header><div class="nav wrap"><a class="brand" href="#"><b>SHIFT</b>ZONE</a><nav><button data-scroll="games">Games</button><button data-scroll="garage">Garage</button><button data-scroll="about">About</button></nav><button id="random">↻</button></div></header><main>
 <section class="hero wrap"><div><small>SHIFTZONE / CAR GAME HUB</small><h1>DRIVE.<br><em>DRIFT.</em> REPEAT.</h1><p>Quick browser car games: 3D driving, arcade drifting, racing, parking, pixel runs and more.</p><button class="primary" data-game="drift">PLAY 3D DRIVE</button> <button data-scroll="games">BROWSE GAMES</button></div><div class="hero-car"><div class="car"><i></i><span></span><b></b></div></div></section>
-
-<section class="wrap section" id="games">
-<div class="head"><div><small>EXPLORE THE GARAGE</small><h2>CAR GAMES</h2></div><input id="search" placeholder="Search games..." aria-label="Search games"></div>
+<section class="wrap section" id="games"><div class="head"><div><small>EXPLORE THE GARAGE</small><h2>CAR GAMES</h2></div><input id="search" placeholder="Search games..." aria-label="Search games"></div>
 <div class="tabs"><button class="active" data-filter="all">ALL</button><button data-filter="3d">3D</button><button data-filter="driving">DRIVING</button><button data-filter="drifting">DRIFTING</button><button data-filter="racing">RACING</button><button data-filter="parking">PARKING</button><button data-filter="arcade">ARCADE</button><button data-filter="pixel">PIXEL</button></div>
 <div class="grid" id="gamesGrid">
 <article data-cat="3d drifting driving" data-title="Drift Run"><div class="thumb drift"><label>3D PLAYABLE</label><div class="road"></div><div class="mini red"></div></div><div class="card"><div><tag>3D / DRIFTING</tag><h3>Drift Run</h3><p>Slide a procedural road with throttle, steering and handbrake.</p></div><button class="play" data-game="drift">DRIVE →</button></div></article>
@@ -25,21 +13,10 @@
 <article data-cat="pixel arcade driving" data-title="Pixel Rally"><div class="thumb pixel"><label>PIXEL</label><div class="pixel-track"></div><div class="pixel-car"></div></div><div class="card"><div><tag>PIXEL / RALLY</tag><h3>Pixel Rally</h3><p>Retro checkpoint racing with chunky cars and fast stages.</p></div><button class="play" data-game="pixel">PLAY →</button></div></article>
 <article data-cat="pixel arcade parking" data-title="Pixel Parking"><div class="thumb pixelpark"><label>PIXEL</label><div class="pixel-grid"></div><div class="pixel-car bluecar"></div></div><div class="card"><div><tag>PIXEL / PARKING</tag><h3>Pixel Parking</h3><p>Rotate, line up and park a tiny retro ride.</p></div><button class="play" data-game="pixelpark">PLAY →</button></div></article>
 <article data-cat="arcade racing" data-title="Drag Dash"><div class="thumb drag"><label>ARCADE</label><div class="drag-lanes"></div><div class="mini yellow"></div></div><div class="card"><div><tag>ARCADE / DRAG</tag><h3>Drag Dash</h3><p>Tap the shift point and launch down a short strip.</p></div><button class="play" data-game="drag">PLAY →</button></div></article>
-<article data-cat="arcade driving" data-title="Stunt Valley"><div class="thumb stunt"><label>ARCADE</label><div class="ramp"></div><div class="mini red"></div></div><div class="card"><div><tag>ARCADE / STUNT</tag><h3>Stunt Valley</h3><p>Hit ramps, collect checkpoints and land cleanly.</p></div><button class="play" data-game="stunt">PLAY →</button></div></article>
 <article data-cat="3d driving" data-title="Free Drive"><div class="thumb free"><label>3D</label><div class="road"></div><div class="mini red"></div></div><div class="card"><div><tag>3D / FREE DRIVE</tag><h3>Free Drive</h3><p>Relaxed cruising with no timer and a wider road.</p></div><button class="play" data-game="free">DRIVE →</button></div></article>
 <article data-cat="pixel racing arcade" data-title="Pixel Grand Prix"><div class="thumb pixelrace"><label>PIXEL</label><div class="pixel-track"></div><div class="pixel-car yellowcar"></div></div><div class="card"><div><tag>PIXEL / RACING</tag><h3>Pixel Grand Prix</h3><p>Three-lap retro racing with quick corners and boosts.</p></div><button class="play" data-game="pixelgp">PLAY →</button></div></article>
 </div><p id="empty">No games match that search.</p></section>
-
-<section class="wrap section" id="garage"><div class="head"><div><small>YOUR RIDES</small><h2>THE GARAGE</h2></div><button id="randomRide">RANDOM RIDE ↗</button></div><div class="grid rides">
-<article class="selected"><div class="ride jxr"></div><small>01 / JDM-INSPIRED</small><h3>Sunset JX-R</h3><p>Grip ★★★★☆ · Drift ★★★★★</p></article>
-<article><div class="ride gt"></div><small>02 / GRAND TOURER</small><h3>Veloce GT</h3><p>Grip ★★★★★ · Drift ★★★☆☆</p></article>
-<article><div class="ride night"></div><small>03 / NIGHT RUNNER</small><h3>Nightfall R</h3><p>Grip ★★★★☆ · Drift ★★★★☆</p></article>
-<article><div class="ride hyper"></div><small>04 / HYPERCAR</small><h3>Hyperion X</h3><p>Grip ★★★★★ · Drift ★★☆☆☆</p></article>
-</div></section>
-
-<section class="wrap play" id="play"><div class="toolbar"><span id="modeLabel">● LIVE / DRIFT RUN</span><strong id="score">SCORE 000000</strong><span id="surface">ROAD</span><button id="close" aria-label="Close game">×</button></div><div class="canvas"><canvas id="game"></canvas><div id="start"><strong id="startTitle">3D DRIFT RUN</strong><span id="startHint">WASD / ARROWS to drive · SPACE to handbrake</span><button class="primary" id="startBtn">START DRIVE</button></div><div class="hud"><span id="hudSpeed">000 KM/H</span><span id="hudDrift">SCORE 0</span></div><div id="mobileControls"><button data-key="a">◀</button><button data-key="w">▲</button><button data-key="s">▼</button><button data-key="d">▶</button><button data-key=" ">DRIFT</button></div></div></section>
-
-<section class="wrap about" id="about"><div><small>ABOUT SHIFTZONE</small><h2>A CAR-GAME PLAYGROUND.</h2></div><p>ShiftZone mixes quick arcade games, retro pixel racers and lightweight 3D driving. The structure is inspired by the discovery-first feel of car-game hubs, while the games, names, visuals and code here are original.</p></section>
-</main><footer><div class="wrap">SHIFTZONE <span>ORIGINAL CAR GAMES / 2026</span></div></footer>
-<script src="https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.min.js"></script><script src="script.js"></script>
-</body></html>
+<section class="wrap section" id="garage"><div class="head"><div><small>YOUR RIDES</small><h2>THE GARAGE</h2></div><button id="randomRide">RANDOM RIDE ↗</button></div><div class="grid rides"><article class="selected"><div class="ride jxr"></div><small>01 / JDM-INSPIRED</small><h3>Sunset JX-R</h3><p>Grip ★★★★☆ · Drift ★★★★★</p></article><article><div class="ride gt"></div><small>02 / GRAND TOURER</small><h3>Veloce GT</h3><p>Grip ★★★★★ · Drift ★★★☆☆</p></article><article><div class="ride night"></div><small>03 / NIGHT RUNNER</small><h3>Nightfall R</h3><p>Grip ★★★★☆ · Drift ★★★★☆</p></article><article><div class="ride hyper"></div><small>04 / HYPERCAR</small><h3>Hyperion X</h3><p>Grip ★★★★★ · Drift ★★☆☆☆</p></article></div></section>
+<section class="wrap play" id="play"><div class="toolbar"><span id="modeLabel">● LIVE / DRIFT RUN</span><strong id="score">SCORE 000000</strong><span id="surface">ROAD</span><button id="close">×</button></div><div class="canvas"><canvas id="game"></canvas><div id="start"><strong id="startTitle">3D DRIFT RUN</strong><span id="startHint">WASD / ARROWS to drive · SPACE to handbrake</span><button class="primary" id="startBtn">START DRIVE</button></div><div class="hud"><span id="hudSpeed">000 KM/H</span><span id="hudDrift">SCORE 0</span></div><div id="mobileControls"><button data-key="a">◀</button><button data-key="w">▲</button><button data-key="s">▼</button><button data-key="d">▶</button><button data-key=" ">DRIFT</button></div></div></section>
+<section class="wrap about" id="about"><div><small>ABOUT SHIFTZONE</small><h2>A CAR-GAME PLAYGROUND.</h2></div><p>ShiftZone mixes quick arcade games, retro pixel racers and lightweight 3D driving. The structure is inspired by the discovery-first feel of car-game hubs, while the games, names, visuals and code here are original.</p></section></main><footer><div class="wrap">SHIFTZONE <span>ORIGINAL CAR GAMES / 2026</span></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.min.js"></script><script src="script.js"></script></body></html>
