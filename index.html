@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShiftZone — Car Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="nav wrap"><a class="brand" href="#"><b>SHIFT</b>ZONE</a><nav><button data-scroll="games">Games</button><button data-scroll="garage">Garage</button><button data-scroll="about">About</button></nav><button id="random">↻</button></div></header>
+<main>
+<section class="hero wrap"><div><small>SHIFTZONE / DRIVING GAMES</small><h1>DRIVE.<br><em>DRIFT.</em> REPEAT.</h1><p>Short sessions. Original cars. No account needed.</p><button class="primary" data-game="drift">PLAY DRIFT RUN</button> <button data-scroll="games">BROWSE GAMES</button></div><div class="hero-car"><div class="car"><i></i><span></span><b></b></div></div></section>
+<section class="wrap section" id="games"><div class="head"><div><small>PICK A GAME</small><h2>FEATURED GAMES</h2></div><input id="search" placeholder="Search games..."></div>
+<div class="tabs"><button class="active" data-filter="all">ALL</button><button data-filter="driving">DRIVING</button><button data-filter="drifting">DRIFTING</button><button data-filter="parking">PARKING</button><button data-filter="racing">RACING</button></div>
+<div class="grid" id="gamesGrid">
+<article data-cat="drifting driving" data-title="Drift Run"><div class="thumb drift"><label>PLAYABLE</label><div class="road"></div><div class="mini red"></div></div><div class="card"><div><tag>DRIFTING</tag><h3>Drift Run</h3><p>Hold the line, chain corners, build your score.</p></div><button class="play" data-game="drift">PLAY →</button></div></article>
+<article data-cat="parking driving" data-title="Park It"><div class="thumb park"><label>NEW</label><div class="mini blue"></div></div><div class="card"><div><tag> PARKING</tag><h3>Park It</h3><p>Find the cleanest line into the spot.</p></div><button class="play" data-game="park">PLAY →</button></div></article>
+<article data-cat="racing driving" data-title="Time Attack"><div class="thumb race"><label>TIME</label><div class="road"></div><div class="mini yellow"></div></div><div class="card"><div><tag>RACING</tag><h3>Time Attack</h3><p>Beat the clock through three quick sectors.</p></div><button class="play" data-game="time">PLAY →</button></div></article>
+<article data-cat="driving" data-title="Traffic Dodge"><div class="thumb traffic"><label>ARCADE</label><div class="road"></div><div class="mini blue"></div></div><div class="card"><div><tag>DRIVING</tag><h3>Traffic Dodge</h3><p>Switch lanes and survive as long as possible.</p></div><button class="play" data-game="traffic">PLAY →</button></div></article>
+</div><p id="empty">No games match that search.</p></section>
+<section class="wrap section" id="garage"><div class="head"><div><small>YOUR RIDES</small><h2>THE GARAGE</h2></div><button id="randomRide">RANDOM RIDE ↗</button></div><div class="grid rides">
+<article class="selected"><div class="ride jxr"></div><small>01 / JDM-INSPIRED</small><h3>Sunset JX-R</h3><p>Grip ★★★★☆ · Drift ★★★★★</p></article>
+<article><div class="ride gt"></div><small>02 / GRAND TOURER</small><h3>Veloce GT</h3><p>Grip ★★★★★ · Drift ★★★☆☆</p></article>
+<article><div class="ride night"></div><small>03 / NIGHT RUNNER</small><h3>Nightfall R</h3><p>Grip ★★★★☆ · Drift ★★★★☆</p></article>
+<article><div class="ride hyper"></div><small>04 / HYPERCAR</small><h3>Hyperion X</h3><p>Grip ★★★★★ · Drift ★★☆☆☆</p></article>
+</div></section>
+<section class="wrap play" id="play"><div class="toolbar">● DRIFT RUN <strong id="score">SCORE 000000</strong><button id="close">×</button></div><div class="canvas"><canvas id="game" width="900" height="430"></canvas><div id="start"><strong>DRIFT RUN</strong><span>Use ← → or A / D to steer</span><button class="primary" id="startBtn">START RUN</button></div></div></section>
+<section class="wrap about" id="about"><div><small>ABOUT SHIFTZONE</small><h2>BUILT FOR QUICK RUNS.</h2></div><p>ShiftZone is a small collection of original arcade-style driving games. Pick a ride, jump into a run, and get back to the action.</p></section>
+</main><footer><div class="wrap">SHIFTZONE <span>ORIGINAL CAR GAMES / 2026</span></div></footer>
+<script src="script.js"></script>
+</body></html>
